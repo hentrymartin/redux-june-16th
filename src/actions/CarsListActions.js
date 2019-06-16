@@ -12,7 +12,6 @@ export function getCars() {
     fetch('http://localhost:3004/cars')
       .then(res => res.json())
       .then(response => {
-        console.log(response);
         dispatch(onCarsReceived(response));
       });
   };
